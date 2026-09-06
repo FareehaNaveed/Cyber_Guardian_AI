@@ -1,12 +1,13 @@
 /**
  * Cyber Guardian AI — API Service
- * Tries backend first, falls back to client-side analysis.
+ * All requests point to the live backend via VITE_API_BASE_URL.
+ * Falls back to client-side analysis if backend is unreachable.
  */
 
 import { analyzeEmail, analyzeSms, analyzeUrl, analyzePassword, analyzeQrText } from './clientAnalysis';
 import type { AnalysisResult } from './clientAnalysis';
 
-const API_BASE = import.meta.env.VITE_API_URL || '';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || '';
 
 export type { AnalysisResult };
 
