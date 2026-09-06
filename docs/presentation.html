@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber Guardian AI - Presentation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --obsidian: #0a0a0f;
+    --graphite: #1a1a1f;
+    --magenta: #e91e8c;
+    --teal: #14b8a6;
+    --emerald: #10b981;
+    --amber: #f59e0b;
+    --danger: #ef4444;
+    --text: #e2e2e5;
+    --muted: #7b7c87;
+  }
+  
+  @page {
+    size: 16in 9in;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--obsidian);
+    color: var(--text);
+  }
+  
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    padding: 80px 120px;
+    background: linear-gradient(135deg, var(--obsidian) 0%, #0f0f18 50%, #0a0f1a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+  
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(233,30,140,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .slide::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20,184,166,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  /* Title Slide */
+  .slide-title {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide-title .badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(233,30,140,0.1);
+    border: 1px solid rgba(233,30,140,0.3);
+    border-radius: 999px;
+    color: var(--magenta);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  .slide-title h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  
+  .slide-title h1 .gradient {
+    background: linear-gradient(135deg, var(--magenta), var(--teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .slide-title .subtitle {
+    font-size: 24px;
+    color: var(--muted);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .slide-title .logo {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--magenta), var(--teal));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 40px;
+  }
+  
+  /* Section Headers */
+  .section-header {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-header .accent {
+    color: var(--magenta);
+  }
+  
+  /* Content Slides */
+  .slide-content {
+    padding: 80px 140px;
+  }
+  
+  .slide-content h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .slide-content h2 .accent {
+    color: var(--magenta);
+  }
+  
+  /* Grid Layout */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Cards */
+  .card {
+    background: rgba(26,26,31,0.6);
+    border: 1px solid rgba(63,64,72,0.3);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .card-icon.magenta { background: rgba(233,30,140,0.15); }
+  .card-icon.teal { background: rgba(20,184,166,0.15); }
+  .card-icon.amber { background: rgba(245,158,11,0.15); }
+  .card-icon.emerald { background: rgba(16,185,129,0.15); }
+  .card-icon.danger { background: rgba(239,68,68,0.15); }
+  
+  .card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  
+  /* Lists */
+  .feature-list {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    font-size: 20px;
+    color: var(--text);
+    border-bottom: 1px solid rgba(63,64,72,0.2);
+  }
+  
+  .feature-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .feature-list .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .feature-list .icon.check { background: rgba(16,185,129,0.15); }
+  .feature-list .icon.warn { background: rgba(245,158,11,0.15); }
+  
+  /* Stats */
+  .stat-box {
+    text-align: center;
+    padding: 40px 24px;
+  }
+  
+  .stat-number {
+    font-size: 56px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--magenta), var(--teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+  
+  /* Architecture Diagram */
+  .arch-box {
+    background: rgba(26,26,31,0.8);
+    border: 1px solid rgba(233,30,140,0.2);
+    border-radius: 12px;
+    padding: 20px 28px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .arch-box.frontend { border-color: rgba(20,184,166,0.3); }
+  .arch-box.backend { border-color: rgba(233,30,140,0.3); }
+  .arch-box.ai { border-color: rgba(245,158,11,0.3); }
+  
+  .arrow {
+    text-align: center;
+    font-size: 28px;
+    color: var(--muted);
+    padding: 8px 0;
+  }
+  
+  /* Footer */
+  .slide-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 120px;
+    right: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--muted);
+    z-index: 1;
+  }
+  
+  .slide-footer .brand {
+    font-weight: 700;
+    color: var(--text);
+  }
+  
+  /* Quote */
+  .quote {
+    font-size: 28px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+    max-width: 1000px;
+    padding: 40px;
+    border-left: 4px solid var(--magenta);
+    background: rgba(233,30,140,0.05);
+    border-radius: 0 12px 12px 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Highlight */
+  .highlight {
+    color: var(--magenta);
+    font-weight: 700;
+  }
+  
+  .highlight-teal {
+    color: var(--teal);
+    font-weight: 700;
+  }
+  
+  /* Code Block */
+  .code-block {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(63,64,72,0.3);
+    border-radius: 12px;
+    padding: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: var(--teal);
+    overflow-x: auto;
+  }
+  
+  .code-comment { color: var(--muted); }
+  .code-keyword { color: var(--magenta); }
+  .code-string { color: var(--emerald); }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide slide-title">
+  <div class="logo">🛡️</div>
+  <div class="badge">AI-Powered Cybersecurity</div>
+  <h1><span class="gradient">Cyber Guardian</span> AI</h1>
+  <p class="subtitle">Your AI-powered cybersecurity companion. Analyze suspicious emails, messages, websites, QR codes and passwords — and understand the risk before you act.</p>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>September 2026</span>
+  </div>
+</div>
+
+<!-- Slide 2: The Problem -->
+<div class="slide slide-content">
+  <h2>The <span class="accent">Problem</span></h2>
+  <div class="grid-2">
+    <div>
+      <div class="quote">
+        "Every day, millions of people receive suspicious emails, scam texts, and encounter malicious websites — but most don't know how to identify the threats."
+      </div>
+      <div style="margin-top: 40px;">
+        <div class="stat-box card">
+          <div class="stat-number">3.4B</div>
+          <div class="stat-label">Phishing emails sent daily</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ul class="feature-list">
+        <li>
+          <span class="icon warn">📧</span>
+          <div><strong>Email Phishing</strong><br><span style="color: var(--muted)">Attackers impersonate banks, services, and colleagues to steal credentials</span></div>
+        </li>
+        <li>
+          <span class="icon warn">💬</span>
+          <div><strong>SMS Scams</strong><br><span style="color: var(--muted)">Fake delivery notices, bank alerts, and prize notifications</span></div>
+        </li>
+        <li>
+          <span class="icon warn">🌐</span>
+          <div><strong>Malicious URLs</strong><br><span style="color: var(--muted)">Lookalike domains and shortened links hiding real destinations</span></div>
+        </li>
+        <li>
+          <span class="icon warn">📱</span>
+          <div><strong>QR Code Threats</strong><br><span style="color: var(--muted)">Tampered codes redirecting to phishing sites</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>2 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 3: Our Solution -->
+<div class="slide slide-content">
+  <h2>Our <span class="accent">Solution</span></h2>
+  <div class="grid-2">
+    <div>
+      <p style="font-size: 22px; color: var(--muted); line-height: 1.8; margin-bottom: 40px;">
+        Cyber Guardian AI is an <span class="highlight">AI-powered cybersecurity assistant</span> that helps everyday users identify and understand digital threats. No account required — analyze threats instantly.
+      </p>
+      <div class="card" style="border-color: rgba(233,30,140,0.3);">
+        <div class="card-icon magenta">🎯</div>
+        <h3>For Everyone</h3>
+        <p>Designed for non-technical users. Simple explanations, not jargon. English and Urdu support for broader accessibility.</p>
+      </div>
+    </div>
+    <div>
+      <div class="grid-2" style="gap: 20px;">
+        <div class="card">
+          <div class="card-icon teal">📧</div>
+          <h3>Email</h3>
+          <p>Phishing detection</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal">💬</div>
+          <h3>SMS</h3>
+          <p>Scam identification</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal">🌐</div>
+          <h3>URL</h3>
+          <p>Website safety check</p>
+        </div>
+        <div class="card">
+          <div class="card-icon teal">📱</div>
+          <h3>QR Code</h3>
+          <p>Content analysis</p>
+        </div>
+        <div class="card" style="grid-column: span 2;">
+          <div class="card-icon emerald">🔐</div>
+          <h3>Password</h3>
+          <p>Client-side strength check (never stored)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>3 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 4: How It Works -->
+<div class="slide slide-content">
+  <h2>How It <span class="accent">Works</span></h2>
+  <div style="display: flex; gap: 24px; align-items: flex-start; position: relative; z-index: 1;">
+    <div class="card" style="flex: 1; text-align: center;">
+      <div class="card-icon magenta" style="margin: 0 auto 16px;">1</div>
+      <h3>Submit</h3>
+      <p>Paste suspicious email, SMS, URL, or upload QR code</p>
+    </div>
+    <div style="font-size: 32px; color: var(--muted); padding-top: 24px;">→</div>
+    <div class="card" style="flex: 1; text-align: center;">
+      <div class="card-icon teal" style="margin: 0 auto 16px;">2</div>
+      <h3>Validate</h3>
+      <p>Input sanitization and security checks</p>
+    </div>
+    <div style="font-size: 32px; color: var(--muted); padding-top: 24px;">→</div>
+    <div class="card" style="flex: 1; text-align: center;">
+      <div class="card-icon amber" style="margin: 0 auto 16px;">3</div>
+      <h3>Analyze</h3>
+      <p>Pattern matching + AI interpretation</p>
+    </div>
+    <div style="font-size: 32px; color: var(--muted); padding-top: 24px;">→</div>
+    <div class="card" style="flex: 1; text-align: center;">
+      <div class="card-icon emerald" style="margin: 0 auto 16px;">4</div>
+      <h3>Explain</h3>
+      <p>Risk assessment with evidence</p>
+    </div>
+    <div style="font-size: 32px; color: var(--muted); padding-top: 24px;">→</div>
+    <div class="card" style="flex: 1; text-align: center;">
+      <div class="card-icon danger" style="margin: 0 auto 16px;">5</div>
+      <h3>Action</h3>
+      <p>Clear recommendations to stay safe</p>
+    </div>
+  </div>
+  
+  <div style="margin-top: 60px; position: relative; z-index: 1;">
+    <div class="grid-3">
+      <div class="card" style="border-left: 3px solid var(--teal);">
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 8px;">OBSERVED</h3>
+        <p>Directly found in submitted content</p>
+      </div>
+      <div class="card" style="border-left: 3px solid var(--magenta);">
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--magenta); margin-bottom: 8px;">DERIVED</h3>
+        <p>Determined through analysis</p>
+      </div>
+      <div class="card" style="border-left: 3px solid var(--amber);">
+        <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--amber); margin-bottom: 8px;">AI INTERPRETATION</h3>
+        <p>Clearly labeled AI explanation</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>4 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 5: Live Demo -->
+<div class="slide slide-content">
+  <h2>Live <span class="accent">Demo</span></h2>
+  <div class="grid-2">
+    <div>
+      <div class="card" style="margin-bottom: 24px;">
+        <h3 style="color: var(--magenta); margin-bottom: 16px;">📧 Email Analysis</h3>
+        <div class="code-block">
+          <span class="code-comment">// Suspicious email input</span><br>
+          <span class="code-keyword">subject:</span> <span class="code-string">"URGENT: Verify your account"</span><br>
+          <span class="code-keyword">sender:</span> <span class="code-string">"security@bank-example.com"</span><br>
+          <span class="code-keyword">body:</span> <span class="code-string">"Your account has been compromised..."</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--teal); margin-bottom: 16px;">✅ Result</h3>
+        <div style="display: flex; gap: 16px; margin-bottom: 12px;">
+          <span style="background: rgba(245,158,11,0.15); color: var(--amber); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">SUSPICIOUS</span>
+          <span style="font-family: 'IBM Plex Mono'; color: var(--muted);">Score: 50/100</span>
+        </div>
+        <p style="font-size: 14px; color: var(--muted);">3 indicators found: phishing keywords, urgency, generic greeting</p>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom: 24px;">
+        <h3 style="color: var(--teal); margin-bottom: 16px;">🔐 Password Check</h3>
+        <div class="code-block">
+          <span class="code-comment">// Client-side only — never sent to server</span><br>
+          <span class="code-keyword">password:</span> <span class="code-string">"password123"</span><br>
+          <span class="code-comment">// Analysis happens in browser</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--danger); margin-bottom: 16px;">⚠️ Result</h3>
+        <div style="display: flex; gap: 16px; margin-bottom: 12px;">
+          <span style="background: rgba(239,68,68,0.15); color: var(--danger); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 700;">WEAK</span>
+          <span style="font-family: 'IBM Plex Mono'; color: var(--muted);">Crack time: 76 days</span>
+        </div>
+        <p style="font-size: 14px; color: var(--muted);">Common password, sequential pattern, low diversity</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>5 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 6: Architecture -->
+<div class="slide slide-content">
+  <h2>Technical <span class="accent">Architecture</span></h2>
+  <div class="grid-2">
+    <div>
+      <div style="position: relative; z-index: 1;">
+        <div class="arch-box frontend" style="margin-bottom: 16px;">
+          🖥️ <strong>Frontend</strong><br>
+          <span style="font-size: 14px; color: var(--muted);">React + TypeScript + Vite + Tailwind CSS</span>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="arch-box backend" style="margin-bottom: 16px;">
+          ⚡ <strong>Backend API</strong><br>
+          <span style="font-size: 14px; color: var(--muted);">Python FastAPI + Pydantic</span>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="arch-box" style="margin-bottom: 16px;">
+          🔍 <strong>Analyzer Services</strong><br>
+          <span style="font-size: 14px; color: var(--muted);">Email, SMS, URL, Password, QR</span>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="arch-box ai">
+          🤖 <strong>AI Provider</strong><br>
+          <span style="font-size: 14px; color: var(--muted);">Qwen/Alibaba Cloud (configurable)</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-size: 24px; margin-bottom: 24px;">Key Technical Decisions</h3>
+      <ul class="feature-list">
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>No Authentication</strong><br><span style="color: var(--muted)">Zero friction — analyze threats instantly</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Client-Side Password Analysis</strong><br><span style="color: var(--muted)">Passwords never leave the browser</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Modular Analyzers</strong><br><span style="color: var(--muted)">Each threat type has dedicated analysis logic</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Session-Only History</strong><br><span style="color: var(--muted)">Clears when browser closes</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Prompt Injection Defense</strong><br><span style="color: var(--muted)">User content treated as untrusted data</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>6 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 7: Security & Privacy -->
+<div class="slide slide-content">
+  <h2>Security & <span class="accent">Privacy</span></h2>
+  <div class="grid-2">
+    <div>
+      <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--emerald);">✅ What We Do</h3>
+      <ul class="feature-list">
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Client-side password analysis</strong><br><span style="color: var(--muted)">Passwords never leave your browser</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>No account required</strong><br><span style="color: var(--muted)">Use all tools anonymously</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Temporary history</strong><br><span style="color: var(--muted)">SessionStorage, clears on browser close</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>Input validation</strong><br><span style="color: var(--muted)">All endpoints validate and sanitize</span></div>
+        </li>
+        <li>
+          <span class="icon check">✓</span>
+          <div><strong>CORS protection</strong><br><span style="color: var(--muted)">Restrictive cross-origin policies</span></div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size: 24px; margin-bottom: 24px; color: var(--danger);">❌ What We Don't Do</h3>
+      <ul class="feature-list">
+        <li>
+          <span class="icon warn">✗</span>
+          <div><strong>Store passwords</strong><br><span style="color: var(--muted)">Analyzed client-side only</span></div>
+        </li>
+        <li>
+          <span class="icon warn">✗</span>
+          <div><strong>Require authentication</strong><br><span style="color: var(--muted)">No accounts, no login walls</span></div>
+        </li>
+        <li>
+          <span class="icon warn">✗</span>
+          <div><strong>Collect personal data</strong><br><span style="color: var(--muted)">Minimal data collection</span></div>
+        </li>
+        <li>
+          <span class="icon warn">✗</span>
+          <div><strong>Fabricate threats</strong><br><span style="color: var(--muted)">Never invent security warnings</span></div>
+        </li>
+        <li>
+          <span class="icon warn">✗</span>
+          <div><strong>Expose API keys</strong><br><span style="color: var(--muted)">Keys stay on the server</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>7 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 8: Education -->
+<div class="slide slide-content">
+  <h2>Cybersecurity <span class="accent">Education</span></h2>
+  <p style="font-size: 20px; color: var(--muted); margin-bottom: 40px; position: relative; z-index: 1;">
+    Not just detection — we teach users to recognize threats themselves.
+  </p>
+  <div class="grid-3" style="position: relative; z-index: 1;">
+    <div class="card">
+      <div class="card-icon magenta">📧</div>
+      <h3>Phishing</h3>
+      <p>Learn to identify fake emails and social engineering</p>
+    </div>
+    <div class="card">
+      <div class="card-icon teal">💬</div>
+      <h3>SMS Scams</h3>
+      <p>Recognize fraudulent text messages</p>
+    </div>
+    <div class="card">
+      <div class="card-icon emerald">🔐</div>
+      <h3>Passwords</h3>
+      <p>Create strong, unique passwords</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">📱</div>
+      <h3>QR Safety</h3>
+      <p>Scan QR codes safely</p>
+    </div>
+    <div class="card">
+      <div class="card-icon teal">🌐</div>
+      <h3>Safe Browsing</h3>
+      <p>Navigate the web securely</p>
+    </div>
+    <div class="card">
+      <div class="card-icon magenta">🔑</div>
+      <h3>OTP Safety</h3>
+      <p>Protect verification codes</p>
+    </div>
+    <div class="card">
+      <div class="card-icon emerald">👥</div>
+      <h3>Social Engineering</h3>
+      <p>Resist manipulation tactics</p>
+    </div>
+    <div class="card">
+      <div class="card-icon amber">👁️</div>
+      <h3>Online Privacy</h3>
+      <p>Protect personal information</p>
+    </div>
+    <div class="card">
+      <div class="card-icon danger">🔗</div>
+      <h3>Suspicious Links</h3>
+      <p>Identify malicious URLs</p>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>8 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 9: Impact -->
+<div class="slide slide-content">
+  <h2>Impact & <span class="accent">Results</span></h2>
+  <div class="grid-4" style="margin-bottom: 60px; position: relative; z-index: 1;">
+    <div class="card stat-box">
+      <div class="stat-number">5</div>
+      <div class="stat-label">Analyzers</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">15+</div>
+      <div class="stat-label">Threat Indicators</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">10</div>
+      <div class="stat-label">Education Topics</div>
+    </div>
+    <div class="card stat-box">
+      <div class="stat-number">2</div>
+      <div class="stat-label">Languages</div>
+    </div>
+  </div>
+  
+  <div class="grid-2" style="position: relative; z-index: 1;">
+    <div class="card">
+      <h3 style="color: var(--emerald); margin-bottom: 16px;">🎯 Key Achievements</h3>
+      <ul class="feature-list">
+        <li><span class="icon check">✓</span> Zero-friction access — no accounts needed</li>
+        <li><span class="icon check">✓</span> Real working analyzers with pattern detection</li>
+        <li><span class="icon check">✓</span> Client-side password security (privacy-first)</li>
+        <li><span class="icon check">✓</span> Bilingual support (English + Urdu)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="color: var(--teal); margin-bottom: 16px;">🔮 Future Vision</h3>
+      <ul class="feature-list">
+        <li><span class="icon check">✓</span> Live QR camera scanning</li>
+        <li><span class="icon check">✓</span> Browser extension for real-time protection</li>
+        <li><span class="icon check">✓</span> Mobile app with push notifications</li>
+        <li><span class="icon check">✓</span> Community threat reporting</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>9 / 10</span>
+  </div>
+</div>
+
+<!-- Slide 10: Thank You -->
+<div class="slide slide-title">
+  <div class="logo">🛡️</div>
+  <h1><span class="gradient">Thank You</span></h1>
+  <p class="subtitle" style="margin-bottom: 40px;">
+    Cyber Guardian AI — Making cybersecurity accessible to everyone.
+  </p>
+  <div style="display: flex; gap: 24px; justify-content: center;">
+    <div class="card" style="padding: 20px 32px; text-align: center;">
+      <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px;">Live Demo</div>
+      <div style="font-size: 18px; font-weight: 700; color: var(--teal);">localhost:5173</div>
+    </div>
+    <div class="card" style="padding: 20px 32px; text-align: center;">
+      <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px;">GitHub</div>
+      <div style="font-size: 18px; font-weight: 700; color: var(--magenta);">cyber-guardian-ai</div>
+    </div>
+    <div class="card" style="padding: 20px 32px; text-align: center;">
+      <div style="font-size: 14px; color: var(--muted); margin-bottom: 4px;">Stack</div>
+      <div style="font-size: 18px; font-weight: 700; color: var(--amber);">React + FastAPI</div>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <span class="brand">Cyber Guardian AI</span>
+    <span>Questions?</span>
+  </div>
+</div>
+
+</body>
+</html>
