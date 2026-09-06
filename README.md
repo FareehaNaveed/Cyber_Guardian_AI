@@ -74,23 +74,6 @@ Topics covered: Phishing, SMS Scams, Password Security, QR Code Safety, Safe Bro
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### Landing Page
-![Landing Page](https://via.placeholder.com/800x400/0a0a0f/e91e8c?text=Cyber+Guardian+AI+Landing)
-
-### Analyze Hub
-![Analyze Hub](https://via.placeholder.com/800x400/0a0a0f/14b8a6?text=Security+Analysis+Tools)
-
-### Threat Results
-![Threat Results](https://via.placeholder.com/800x400/0a0a0f/f59e0b?text=Threat+Analysis+Results)
-
-</div>
-
----
-
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -116,14 +99,6 @@ Topics covered: Phishing, SMS Scams, Password Security, QR Code Safety, Safe Bro
 | **Pillow** | Image processing |
 | **Pyzbar** | QR code decoding |
 
-### AI Integration (Optional)
-
-| Technology | Purpose |
-|------------|---------|
-| **Qwen/Alibaba Cloud** | Threat explanations |
-| **Custom API provider** | Extensible AI layer |
-
----
 
 ## 📁 Project Structure
 
