@@ -16,24 +16,6 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Quick Start](#quick-start)
-- [Environment Variables](#environment-variables)
-- [API Documentation](#api-documentation)
-- [How It Works](#how-it-works)
-- [Security](#security)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
 ## 🎯 About
 
 **Cyber Guardian AI** is an AI-powered cybersecurity assistant designed to protect users from digital threats. It detects phishing emails, scam SMS messages, malicious websites, suspicious QR codes, and weak passwords using artificial intelligence.
