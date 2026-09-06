@@ -1,0 +1,77 @@
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m873[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m7:44:49 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m7:45:00 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m7:56:35 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m7:57:37 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar.tsx, /src/index.css[22m
+[2m7:58:02 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m7:58:10 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m7:58:19 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m7:58:30 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:01:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/contexts/LanguageContext.tsx, /src/index.css[22m
+[2m8:01:42 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/contexts/LanguageContext.tsx[22m Could not Fast Refresh ("useLanguage" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m8:01:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.tsx, /src/components/Navbar.tsx, /src/pages/Home.tsx[22m
+[2m8:01:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m8:02:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:08:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/AnalyzeHub.tsx, /src/index.css[22m
+[2m8:08:45 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/EmailAnalyzer.tsx, /src/index.css[22m
+[2m8:09:05 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/SmsAnalyzer.tsx, /src/index.css[22m
+[2m8:09:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/UrlAnalyzer.tsx, /src/index.css[22m
+[2m8:09:41 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/QrAnalyzer.tsx, /src/index.css[22m
+[2m8:10:03 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/PasswordChecker.tsx, /src/index.css[22m
+[2m8:10:23 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ThreatResult.tsx, /src/index.css[22m
+[2m8:10:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/History.tsx, /src/index.css[22m
+[2m8:11:04 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Learn.tsx, /src/index.css[22m
+[2m8:11:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HowItWorks.tsx, /src/index.css[22m
+[2m8:11:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.tsx, /src/index.css[22m
+[2m8:12:11 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Footer.tsx, /src/index.css[22m
+[2m8:12:25 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ThreatResult.tsx, /src/index.css[22m
+[2m8:14:30 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HowItWorks.tsx, /src/index.css[22m
+[2m8:20:33 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:20:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:21:06 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mtailwind.config.js[22m
+[2m8:21:23 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m8:21:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:21:50 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:23:15 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m8:24:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Privacy.tsx, /src/index.css[22m
+[2m8:29:28 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:29:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/contexts/LanguageContext.tsx, /src/index.css[22m
+[2m8:29:49 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/src/contexts/LanguageContext.tsx[22m Could not Fast Refresh ("useLanguage" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m8:29:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/App.tsx, /src/components/Navbar.tsx, /src/pages/Home.tsx, /src/pages/AnalyzeHub.tsx, /src/pages/EmailAnalyzer.tsx, /src/pages/SmsAnalyzer.tsx, /src/pages/UrlAnalyzer.tsx, /src/pages/QrAnalyzer.tsx, /src/pages/PasswordChecker.tsx, /src/components/ThreatResult.tsx, /src/pages/History.tsx, /src/pages/Learn.tsx, /src/pages/HowItWorks.tsx, /src/pages/About.tsx, /src/components/Footer.tsx, /src/pages/Help.tsx, /src/pages/Privacy.tsx[22m
+[2m8:30:15 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m8:30:30 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:36:16 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:36:36 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m8:38:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m8:40:03 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m8:40:50 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Learn.tsx, /src/index.css[22m
+[2m8:41:15 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HowItWorks.tsx, /src/index.css[22m
+[2m8:51:38 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:01:47 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:04:25 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:04:47 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:06:05 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:08:37 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:08:37 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:14:15 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:14:31 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:21:21 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:21:28 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HowItWorks.tsx, /src/index.css[22m
+[2m9:21:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:21:48 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Privacy.tsx, /src/index.css[22m
+[2m9:22:00 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.tsx, /src/index.css[22m
+[2m9:26:12 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:26:23 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:26:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:27:03 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/About.tsx, /src/index.css[22m
+[2m9:27:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Help.tsx, /src/index.css[22m
+[2m9:27:11 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HowItWorks.tsx, /src/index.css[22m
+[2m9:27:22 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Privacy.tsx, /src/index.css[22m
+[2m9:55:05 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:55:14 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m9:55:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
+[2m9:55:43 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
