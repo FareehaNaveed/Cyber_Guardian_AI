@@ -1,0 +1,10 @@
+{
+  "_label": "DEMO / SAMPLE — Not real threat intelligence",
+  "subject": "URGENT: Your Account Has Been Compromised",
+  "sender": "security@paypa1-verify.com",
+  "body": "Dear Customer,\n\nWe have detected unusual activity on your account. Your account has been temporarily limited.\n\nPlease verify your identity immediately by clicking the link below:\nhttp://paypa1-verify.com/account/secure\n\nIf you do not verify within 24 hours, your account will be permanently suspended.\n\nThank you,\nPayPal Security Team",
+  "links": [
+    "http://paypa1-verify.com/account/secure"
+  ],
+  "attachments": []
+}
